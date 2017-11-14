@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://miox.u51.com/zh-cn/docs/index.html">
+  <link rel="canonical" href="https://51nb.github.io/miox-doc/zh-cn/docs/index.html">
   <!-- Alternative links -->
   
     
-      <link rel="alternative" hreflang="en" href="https://miox.u51.com/docs/index.html">
+      <link rel="alternative" hreflang="en" href="https://51nb.github.io/miox-doc/docs/index.html">
     
-      <link rel="alternative" hreflang="zh-cn" href="https://miox.u51.com/zh-cn/docs/index.html">
+      <link rel="alternative" hreflang="zh-cn" href="https://51nb.github.io/miox-doc/zh-cn/docs/index.html">
     
   
   <!-- Icon -->
@@ -42,7 +42,7 @@
   <meta name="description" content="用传统web页面开发的思维模式和开发习惯来开发SPA，让开发单页应用像开发传统web页面一样简单。 什么是 MioxMiox 是一个单页应用的管理框架(SPA management framework)。在传统web开发中，浏览器会帮助开发者管理会话历史以及页面的创建、销毁、切入切出等生命行为，在SPA开发中，这些工作">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Miox 的目标">
-<meta property="og:url" content="https://miox.u51.com/zh-cn/docs/index.html">
+<meta property="og:url" content="https://51nb.github.io/miox-doc/zh-cn/docs/index.html">
 <meta property="og:site_name" content="Miox">
 <meta property="og:description" content="用传统web页面开发的思维模式和开发习惯来开发SPA，让开发单页应用像开发传统web页面一样简单。 什么是 MioxMiox 是一个单页应用的管理框架(SPA management framework)。在传统web开发中，浏览器会帮助开发者管理会话历史以及页面的创建、销毁、切入切出等生命行为，在SPA开发中，这些工作需要由SPA的管理框架来实现，miox 就是做了这样的工作。  miox 支持任">
 <meta property="og:locale" content="zh-cn">
@@ -154,7 +154,7 @@
 </blockquote>
 <h2 id="webview-渲染引擎" class="article-heading"><a href="#webview-渲染引擎" class="headerlink" title="webview 渲染引擎"></a>webview 渲染引擎<a class="article-anchor" href="#webview-渲染引擎" aria-hidden="true"></a></h2><p>当开发者用 miox 结合 vue/react 来开发SPA时，还需要实现 miox 与 vue/react 的对接，在 miox 中称为<strong>渲染引擎</strong>，或称为驱动。<br>miox 官方提供了 <code>miox-vue2x</code>/<code>miox-react</code> 渲染引擎来对接 vue@2.x 和 react，让开发者能快速上手。<br>开发者也可以结合需要自己做更深度的定制，详见如何编写插件一章。</p>
 <p>下面是使用 <code>miox-react</code> 编写的一个简易 SPA。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Miox <span class="keyword">from</span> <span class="string">'miox'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactEngine <span class="keyword">from</span> <span class="string">'miox-react'</span>;</span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ExamplePage</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> &lt;h1&gt;Hello World!&lt;/h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app = <span class="keyword">new</span> Miox();</span><br><span class="line">app.install(ReactEngine);</span><br><span class="line">app.use(<span class="keyword">async</span> app =&gt; <span class="keyword">await</span> app.render(ExamplePage));</span><br><span class="line">app.listen();</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Miox <span class="keyword">from</span> <span class="string">'miox'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactEngine <span class="keyword">from</span> <span class="string">'miox-react'</span>;</span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ExamplePage</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app = <span class="keyword">new</span> Miox();</span><br><span class="line">app.install(ReactEngine);</span><br><span class="line">app.use(<span class="keyword">async</span> app =&gt; <span class="keyword">await</span> app.render(ExamplePage));</span><br><span class="line">app.listen();</span><br></pre></td></tr></table></figure>
 <h2 id="webview-切换动画" class="article-heading"><a href="#webview-切换动画" class="headerlink" title="webview 切换动画"></a>webview 切换动画<a class="article-anchor" href="#webview-切换动画" aria-hidden="true"></a></h2><p>正如前面说到，单个 webview 的生命周期过程中有 <strong>enter</strong>/<strong>leave</strong> 两个行为。<br>当 webview 发生这两个行为时，miox 会控制对应 webview 进行切换（切入或者切出），<br>miox 允许开发者编写插件，或使用官方插件 <code>miox-animation</code> 来定义切换动画，比如淡入淡出，飞入飞出等。<br>如果不做配置，则没有切换动画。</p>
 <h2 id="路由：从-URL-到-webview" class="article-heading"><a href="#路由：从-URL-到-webview" class="headerlink" title="路由：从 URL 到 webview"></a>路由：从 URL 到 webview<a class="article-anchor" href="#路由：从-URL-到-webview" aria-hidden="true"></a></h2><p>当 SPA 的会话历史变化后，miox 会创建一个新的 webview 呈现给用户（如果对应 webview 没有在缓存中的话）。<br>此时的输入是一个 URL，输出是一个 webview，由开发者来定义输入输出间的映射关系，<br>把 <strong>一个 URL 映射到具体 webview 的逻辑</strong>，miox 称为路由(route)。</p>
 <p>route 所定义的映射逻辑，与当前用户在SPA中的会话历史无关，只与当前访问的 URL 相关。</p>
