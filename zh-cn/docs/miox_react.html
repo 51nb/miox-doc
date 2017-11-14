@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>miox-react | Miox</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://miox.u51.com/zh-cn/docs/miox_react.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://miox.u51.com/docs/miox_react.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://miox.u51.com/zh-cn/docs/miox_react.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-a475bf266d.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Miox">
+  <!-- Open Graph -->
+  <meta name="description" content="实现 miox 和 react 桥接的渲染引擎。 使用import Miox from &apos;miox&apos;;import ReactEngine from &apos;miox-react&apos;;import React from &apos;react&apos;;class ExamplePag">
+<meta property="og:type" content="website">
+<meta property="og:title" content="miox-react">
+<meta property="og:url" content="https://miox.u51.com/zh-cn/docs/miox_react.html">
+<meta property="og:site_name" content="Miox">
+<meta property="og:description" content="实现 miox 和 react 桥接的渲染引擎。 使用import Miox from &apos;miox&apos;;import ReactEngine from &apos;miox-react&apos;;import React from &apos;react&apos;;class ExamplePage extends React.Component &amp;#123;    constructor() &amp;#123;        super(">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-11-14T10:27:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="miox-react">
+<meta name="twitter:description" content="实现 miox 和 react 桥接的渲染引擎。 使用import Miox from &apos;miox&apos;;import ReactEngine from &apos;miox-react&apos;;import React from &apos;react&apos;;class ExamplePage extends React.Component &amp;#123;    constructor() &amp;#123;        super(">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/zh-cn/api/" class="main-nav-link">API</a><a href="/plugins/" class="main-nav-link">插件</a>
+      <a href="https://github.com/51nb/miox" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap" style="display:none">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap" style="display:none">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/miox_react.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">miox-react</h1>
+                <a href="https://github.com/51nb/miox-doc/edit/master/source/zh-cn/docs/miox_react.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>实现 miox 和 react 桥接的渲染引擎。</p>
+<h2 id="使用" class="article-heading"><a href="#使用" class="headerlink" title="使用"></a>使用<a class="article-anchor" href="#使用" aria-hidden="true"></a></h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Miox <span class="keyword">from</span> <span class="string">'miox'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactEngine <span class="keyword">from</span> <span class="string">'miox-react'</span>;</span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ExamplePage</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.onclick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.$push(<span class="string">"/b"</span>);</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    webViewDidEnter() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"webview did enter!"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">onClick</span>=<span class="string">&#123;this.onclick&#125;</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app = <span class="keyword">new</span> Miox();</span><br><span class="line">app.install(ReactEngine);</span><br><span class="line">app.use(<span class="keyword">async</span> app =&gt; <span class="keyword">await</span> app.render(ExamplePage));</span><br><span class="line">app.listen();</span><br></pre></td></tr></table></figure>
+<h2 id="React-增强" class="article-heading"><a href="#React-增强" class="headerlink" title="React 增强"></a>React 增强<a class="article-anchor" href="#React-增强" aria-hidden="true"></a></h2><blockquote>
+<p>这里的 webview 就是 React.Component 实例</p>
+<p>与 miox-vue2x 不同，react 采用了回调函数进行消息通讯</p>
+</blockquote>
+<h3 id="webview-webViewDidEnter" class="article-heading"><a href="#webview-webViewDidEnter" class="headerlink" title="webview.webViewDidEnter()"></a>webview.webViewDidEnter()<a class="article-anchor" href="#webview-webViewDidEnter" aria-hidden="true"></a></h3><p>当前webview切换入后触发，不管这个webview是立即创建的还是从缓存中恢复的</p>
+<h3 id="webview-webViewDidLeave" class="article-heading"><a href="#webview-webViewDidLeave" class="headerlink" title="webview.webViewDidLeave()"></a>webview.webViewDidLeave()<a class="article-anchor" href="#webview-webViewDidLeave" aria-hidden="true"></a></h3><p>当前webview切换出后触发</p>
+<h3 id="webview-webViewDidActive" class="article-heading"><a href="#webview-webViewDidActive" class="headerlink" title="webview.webViewDidActive()"></a>webview.webViewDidActive()<a class="article-anchor" href="#webview-webViewDidActive" aria-hidden="true"></a></h3><p>当前webview被再次激活时触发，如果当前webview是立即创建的，该函数不会被调用，只在从缓存中激活才被调用</p>
+<h3 id="webview-webViewSearchChange-prevUrlObj-nextUrlObj" class="article-heading"><a href="#webview-webViewSearchChange-prevUrlObj-nextUrlObj" class="headerlink" title="webview.webViewSearchChange(prevUrlObj, nextUrlObj)"></a>webview.webViewSearchChange(prevUrlObj, nextUrlObj)<a class="article-anchor" href="#webview-webViewSearchChange-prevUrlObj-nextUrlObj" aria-hidden="true"></a></h3><p>仅在非 <code>strict</code> 模式下有效，URL变化不涉及 pathname 且有 search 部分变化时才被调用，参数是变化前的URL和变化后的URL对象，<br>这里的URL对象是一个已经被结构化的对象，由 <code>url</code> 模块创建生成</p>
+<h3 id="webview-webViewHashChange-prevUrlObj-nextUrlObj" class="article-heading"><a href="#webview-webViewHashChange-prevUrlObj-nextUrlObj" class="headerlink" title="webview.webViewHashChange(prevUrlObj, nextUrlObj)"></a>webview.webViewHashChange(prevUrlObj, nextUrlObj)<a class="article-anchor" href="#webview-webViewHashChange-prevUrlObj-nextUrlObj" aria-hidden="true"></a></h3><p>URL变化只涉及 hash 部分变化时才被调用，参数是变化前的URL和变化后的URL对象，<br>这里的URL对象是一个已经被结构化的对象，由 <code>url</code> 模块创建生成</p>
+<h3 id="webview-push-go-replace-redirect-link" class="article-heading"><a href="#webview-push-go-replace-redirect-link" class="headerlink" title="webview.$push/$go/$replace/$redirect/$link"></a>webview.$push/$go/$replace/$redirect/$link<a class="article-anchor" href="#webview-push-go-replace-redirect-link" aria-hidden="true"></a></h3><p>与 SPA 的会话历史交互，是一个代理方法，实际上调用了 mixo 的同名方法</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-11-14T10:27:06.000Z" itemprop="dateModified">上次更新：2017-11-14</time>
+                <a href="miox_vue2x.html" class="article-footer-prev" title="Miox Vue2x Engine"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="miox_vue2x_classify.html" class="article-footer-next" title="Miox Vue2x Classify"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-增强"><span class="toc-text">React 增强</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#webview-webViewDidEnter"><span class="toc-text">webview.webViewDidEnter()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webview-webViewDidLeave"><span class="toc-text">webview.webViewDidLeave()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webview-webViewDidActive"><span class="toc-text">webview.webViewDidActive()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webview-webViewSearchChange-prevUrlObj-nextUrlObj"><span class="toc-text">webview.webViewSearchChange(prevUrlObj, nextUrlObj)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webview-webViewHashChange-prevUrlObj-nextUrlObj"><span class="toc-text">webview.webViewHashChange(prevUrlObj, nextUrlObj)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webview-push-go-replace-redirect-link"><span class="toc-text">webview.$push/$go/$replace/$redirect/$link</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">快速入门</strong><a href="index.html" class="sidebar-link">什么是Miox?</a><a href="setup.html" class="sidebar-link">安装</a><a href="hello_world.html" class="sidebar-link">Hello World</a><a href="miox_css.html" class="sidebar-link">Miox Css</a><strong class="sidebar-title">进阶</strong><a href="miox_runtime.html" class="sidebar-link">Miox运行时</a><a href="miox_dom_tree.html" class="sidebar-link">Miox Dom 树</a><a href="make_plugin.html" class="sidebar-link">编写插件</a><a href="use_ssr.html" class="sidebar-link">使用服务端渲染</a><strong class="sidebar-title">官方插件</strong><a href="miox_router.html" class="sidebar-link">Miox Router</a><a href="miox_animate.html" class="sidebar-link">Miox Animate</a><a href="miox_vue2x.html" class="sidebar-link">Miox Vue2x Engine</a><a href="miox_react.html" class="sidebar-link current">Miox React Engine</a><a href="miox_vue2x_classify.html" class="sidebar-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="sidebar-link">Miox Vue2x Container</a><strong class="sidebar-title">贡献</strong><a href="contribution_code.html" class="sidebar-link">贡献代码</a><a href="contribution_code_list.html" class="sidebar-link">代码结构总览</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://github.com/cevio" target="_blank">沈赟杰</a><br>
+      Documentation licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.
+    </div>
+    <!--<div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/51nb/miox" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>-->
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/zh-cn/api/" class="mobile-nav-link">API</a><a href="/plugins/" class="mobile-nav-link">插件</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/51nb/miox" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速入门</strong><a href="index.html" class="mobile-nav-link">什么是Miox?</a><a href="setup.html" class="mobile-nav-link">安装</a><a href="hello_world.html" class="mobile-nav-link">Hello World</a><a href="miox_css.html" class="mobile-nav-link">Miox Css</a><strong class="mobile-nav-title">进阶</strong><a href="miox_runtime.html" class="mobile-nav-link">Miox运行时</a><a href="miox_dom_tree.html" class="mobile-nav-link">Miox Dom 树</a><a href="make_plugin.html" class="mobile-nav-link">编写插件</a><a href="use_ssr.html" class="mobile-nav-link">使用服务端渲染</a><strong class="mobile-nav-title">官方插件</strong><a href="miox_router.html" class="mobile-nav-link">Miox Router</a><a href="miox_animate.html" class="mobile-nav-link">Miox Animate</a><a href="miox_vue2x.html" class="mobile-nav-link">Miox Vue2x Engine</a><a href="miox_react.html" class="mobile-nav-link current">Miox React Engine</a><a href="miox_vue2x_classify.html" class="mobile-nav-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="mobile-nav-link">Miox Vue2x Container</a><strong class="mobile-nav-title">贡献</strong><a href="contribution_code.html" class="mobile-nav-link">贡献代码</a><a href="contribution_code_list.html" class="mobile-nav-link">代码结构总览</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/miox_react.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="/build/js/main-8827054328.js"></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>

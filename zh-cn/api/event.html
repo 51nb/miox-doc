@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Events | Miox</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://miox.u51.com/zh-cn/api/event.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://miox.u51.com/api/event.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://miox.u51.com/zh-cn/api/event.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-a475bf266d.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Miox">
+  <!-- Open Graph -->
+  <meta name="description" content="Miox的事件不同于nodejs的events模块，它具有异步性，具体参看 async-events-listener 模块的解析。 app.on(&apos;event name&apos;, async (...args) =&amp;gt; &amp;#123;    // await someTimeConsu">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Events">
+<meta property="og:url" content="https://miox.u51.com/zh-cn/api/event.html">
+<meta property="og:site_name" content="Miox">
+<meta property="og:description" content="Miox的事件不同于nodejs的events模块，它具有异步性，具体参看 async-events-listener 模块的解析。 app.on(&apos;event name&apos;, async (...args) =&amp;gt; &amp;#123;    // await someTimeConsumingFun();    // ...&amp;#125;) 常用事件 searchchange 当URL的search部">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-11-14T10:36:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Events">
+<meta name="twitter:description" content="Miox的事件不同于nodejs的events模块，它具有异步性，具体参看 async-events-listener 模块的解析。 app.on(&apos;event name&apos;, async (...args) =&amp;gt; &amp;#123;    // await someTimeConsumingFun();    // ...&amp;#125;) 常用事件 searchchange 当URL的search部">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/zh-cn/api/" class="main-nav-link">API</a><a href="/plugins/" class="main-nav-link">插件</a>
+      <a href="https://github.com/51nb/miox" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap" style="display:none">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap" style="display:none">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="api/event.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Events</h1>
+                <a href="https://github.com/51nb/miox-doc/edit/master/source/zh-cn/api/event.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>Miox的事件不同于nodejs的events模块，它具有异步性，具体参看 <a href="https://www.npmjs.com/package/async-events-listener" target="_blank" rel="noopener">async-events-listener</a> 模块的解析。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.on(<span class="string">'event name'</span>, <span class="keyword">async</span> (...args) =&gt; &#123;</span><br><span class="line">    <span class="comment">// await someTimeConsumingFun();</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="常用事件" class="article-heading"><a href="#常用事件" class="headerlink" title="常用事件"></a>常用事件<a class="article-anchor" href="#常用事件" aria-hidden="true"></a></h2><ul>
+<li><strong>searchchange</strong> 当URL的search部分改变的时候触发，仅在<code>strict:false</code>模式下生效。</li>
+<li><strong>hashchange</strong> 当hash改变时候触发</li>
+<li><strong>app:start</strong> 第一次渲染开始</li>
+<li><strong>app:end</strong> 第一次渲染结束</li>
+<li><strong>process:start</strong> 一次请求响应开发时候触发的事件</li>
+<li><strong>process:end</strong> 一次请求响应结束时候触发的事件</li>
+<li><strong>webview:beforeEnter</strong> 当有 webview 进入前触发</li>
+<li><strong>webview:beforeLeave</strong> 当有 webview 离开前触发</li>
+</ul>
+<h2 id="不常用的事件" class="article-heading"><a href="#不常用的事件" class="headerlink" title="不常用的事件"></a>不常用的事件<a class="article-anchor" href="#不常用的事件" aria-hidden="true"></a></h2><ul>
+<li><strong>{httpStatusCode}</strong> 页面正常渲染，即触发<code>200</code>事件，如果有错误，那么对应错误代码编号的事件，比如<code>500</code>,<code>502</code>等等。</li>
+<li><strong>client:render:mount</strong> 服务端渲染模式下，浏览器端 Mounted 时触发</li>
+<li><strong>client:render:polyfill</strong> 服务端渲染模式下，浏览器端兼容代码需要被加载时候触发，这时请求响应过程未完成。</li>
+<li><strong>server:render:polyfill</strong> 服务端渲染模式下，服务端兼容代码需要被加载时候触发，这时请求响应过程已完成。</li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-11-14T10:36:19.000Z" itemprop="dateModified">上次更新：2017-11-14</time>
+                <a href="index.html" class="article-footer-prev" title="接口"><i class="fa fa-chevron-left"></i><span>上一页</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用事件"><span class="toc-text">常用事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不常用的事件"><span class="toc-text">不常用的事件</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">核心</strong><a href="index.html" class="sidebar-link">接口</a><a href="event.html" class="sidebar-link current">事件</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://github.com/cevio" target="_blank">沈赟杰</a><br>
+      Documentation licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.
+    </div>
+    <!--<div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/51nb/miox" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>-->
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/zh-cn/api/" class="mobile-nav-link">API</a><a href="/plugins/" class="mobile-nav-link">插件</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/51nb/miox" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">核心</strong><a href="index.html" class="mobile-nav-link">接口</a><a href="event.html" class="mobile-nav-link current">事件</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="api/event.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="/build/js/main-8827054328.js"></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>API | Miox</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://miox.u51.com/zh-cn/api/index.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://miox.u51.com/api/index.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://miox.u51.com/zh-cn/api/index.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-a475bf266d.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Miox">
+  <!-- Open Graph -->
+  <meta name="description" content="Constructornew Miox(options)   参数 含义 数据类型 默认值     options.max SPA中允许缓存的最大 webview 个数 number 1   options.popState 是否使用 popState 来改变会话历史，默认使用 hash boolean false  ">
+<meta property="og:type" content="website">
+<meta property="og:title" content="API">
+<meta property="og:url" content="https://miox.u51.com/zh-cn/api/index.html">
+<meta property="og:site_name" content="Miox">
+<meta property="og:description" content="Constructornew Miox(options)   参数 含义 数据类型 默认值     options.max SPA中允许缓存的最大 webview 个数 number 1   options.popState 是否使用 popState 来改变会话历史，默认使用 hash boolean false   options.session 是否使用 sessionStorage 来存储">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-11-14T10:36:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="API">
+<meta name="twitter:description" content="Constructornew Miox(options)   参数 含义 数据类型 默认值     options.max SPA中允许缓存的最大 webview 个数 number 1   options.popState 是否使用 popState 来改变会话历史，默认使用 hash boolean false   options.session 是否使用 sessionStorage 来存储">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/zh-cn/api/" class="main-nav-link">API</a><a href="/plugins/" class="main-nav-link">插件</a>
+      <a href="https://github.com/51nb/miox" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap" style="display:none">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap" style="display:none">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="api/index.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">API</h1>
+                <a href="https://github.com/51nb/miox-doc/edit/master/source/zh-cn/api/index.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="Constructor" class="article-heading"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor<a class="article-anchor" href="#Constructor" aria-hidden="true"></a></h2><h3 id="new-Miox-options" class="article-heading"><a href="#new-Miox-options" class="headerlink" title="new Miox(options)"></a><code>new Miox(options)</code><a class="article-anchor" href="#new-Miox-options" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>数据类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options.max</td>
+<td>SPA中允许缓存的最大 webview 个数</td>
+<td>number</td>
+<td>1</td>
+</tr>
+<tr>
+<td>options.popState</td>
+<td>是否使用 popState 来改变会话历史，默认使用 hash</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>options.session</td>
+<td>是否使用 sessionStorage 来存储SPA的会话历史</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>options.strict</td>
+<td>是否严格模式，非严格模式下search变化不会触发路由处理</td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p>建议在移动端上使用：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">    max: <span class="number">3</span>,</span><br><span class="line">    popState: <span class="literal">false</span>,</span><br><span class="line">    session: <span class="literal">true</span>,</span><br><span class="line">    strict: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在PC端使用：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">    max: <span class="number">1</span>,</span><br><span class="line">    popState: <span class="literal">false</span>,</span><br><span class="line">    session: <span class="literal">false</span>,</span><br><span class="line">    strict: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用SSR模式：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">    max: <span class="number">1</span>,</span><br><span class="line">    popState: <span class="literal">true</span>,</span><br><span class="line">    session: <span class="literal">false</span>,</span><br><span class="line">    strict: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note:</strong></p>
+<p>以下 <code>app</code> 表示 <code>new Miox()</code> 取得的对象</p>
+</blockquote>
+<h2 id="Property" class="article-heading"><a href="#Property" class="headerlink" title="Property"></a>Property<a class="article-anchor" href="#Property" aria-hidden="true"></a></h2><h3 id="app-container-setter-only" class="article-heading"><a href="#app-container-setter-only" class="headerlink" title="app.container -- setter only"></a><code>app.container -- setter only</code><a class="article-anchor" href="#app-container-setter-only" aria-hidden="true"></a></h3><p>在 app.listen() 之前才可以被设置，否则会产生错误。默认使用 <code>document.body</code>。</p>
+<p>app.container 是一个 HTMLElement，它直接挂载了 app.element 元素。</p>
+<h3 id="app-element-getter-only" class="article-heading"><a href="#app-element-getter-only" class="headerlink" title="app.element -- getter only"></a><code>app.element -- getter only</code><a class="article-anchor" href="#app-element-getter-only" aria-hidden="true"></a></h3><p>miox DOM树的根节点，会（间接）挂载各个 webview，自身直接挂载在 app.container 上。</p>
+<p>在 app.listen() 之后才可以被访问到。</p>
+<h3 id="app-request" class="article-heading"><a href="#app-request" class="headerlink" title="app.request"></a><code>app.request</code><a class="article-anchor" href="#app-request" aria-hidden="true"></a></h3><p>通过 <code>Url.parse(urlStr, true)</code> 构造出来的对象，<br>具体属性请查看<a href="https://www.npmjs.com/package/url" target="_blank" rel="noopener">文档</a>。</p>
+<p>app.request 只能在 miox 运行时中才能被访问到。</p>
+<blockquote>
+<p>在通过 <code>Url.parse</code> 构建出 request 对象之前，<code>urlStr</code> 已经被 miox 进行了标准化处理。<br>也就是说，在 hash 模式下的 <code>/a/b.html?c=d#/e/f?g=h</code> 会被标准化成 <code>/e/f?g=h&amp;c=d</code> 才被运行时处理。</p>
+</blockquote>
+<h2 id="Methods" class="article-heading"><a href="#Methods" class="headerlink" title="Methods"></a>Methods<a class="article-anchor" href="#Methods" aria-hidden="true"></a></h2><h3 id="app-use-middleware" class="article-heading"><a href="#app-use-middleware" class="headerlink" title="app.use(middleware)"></a><code>app.use(middleware)</code><a class="article-anchor" href="#app-use-middleware" aria-hidden="true"></a></h3><p>添加一个运行时的中间件。</p>
+<ul>
+<li><strong>Arguments:</strong><ul>
+<li><code>{async Function:(app, next) =&gt; {}} middleware</code></li>
+</ul>
+</li>
+<li><strong>Return:</strong><ul>
+<li><code>{Miox}</code></li>
+</ul>
+</li>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.use(fn1).use(fn5, fn6, [fn7, fn8]);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>中间件回调函数中的 app 就是 miox 实例，且额外添加了 <code>app.request</code> 和 <code>app.render</code>。<br>调用 <code>next</code> 表示执行下一中间件。</p>
+</blockquote>
+<h3 id="app-push-url" class="article-heading"><a href="#app-push-url" class="headerlink" title="app.push(url)"></a><code>app.push(url)</code><a class="article-anchor" href="#app-push-url" aria-hidden="true"></a></h3><p>打开指定URL对应的 webview，在会话历史中清空位于当前记录后的所有记录并新增一条记录。</p>
+<ul>
+<li><strong>Arguments:</strong><ul>
+<li><code>{string} url</code></li>
+</ul>
+</li>
+<li><strong>Return:</strong><ul>
+<li><code>{Promise}</code></li>
+</ul>
+</li>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.push(<span class="string">'/a/b?a=1#c'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="app-replace-url" class="article-heading"><a href="#app-replace-url" class="headerlink" title="app.replace(url)"></a><code>app.replace(url)</code><a class="article-anchor" href="#app-replace-url" aria-hidden="true"></a></h3><p>打开指定URL对应的 webview，在会话历史中替换当前记录。</p>
+<ul>
+<li><strong>Arguments:</strong><ul>
+<li><code>{string} url</code></li>
+</ul>
+</li>
+<li><strong>Return:</strong><ul>
+<li><code>{Promise}</code></li>
+</ul>
+</li>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.replace(<span class="string">'/a/b?a=1#c'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="app-go-step-app-go-url" class="article-heading"><a href="#app-go-step-app-go-url" class="headerlink" title="app.go(step) / app.go(url)"></a><code>app.go(step)</code> / <code>app.go(url)</code><a class="article-anchor" href="#app-go-step-app-go-url" aria-hidden="true"></a></h3><ul>
+<li>如果参数为数字，则打开会话历史中相对当前记录距离为 step 的 URL。</li>
+<li><p>如果参数为字符串，miox 会从会话历史中搜索是否已存在该URL。</p>
+<ul>
+<li>如果存在，计算出相对距离 step 后调用 <code>app.go(step)</code></li>
+<li>如果不存在，调用 <code>app.push(url)</code></li>
+</ul>
+</li>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{number} step | {string} url</code> 相对步数，或跳转地址</li>
+</ul>
+</li>
+<li><strong>Return:</strong><ul>
+<li><code>&lt;Promise&gt;</code></li>
+</ul>
+</li>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.go(<span class="number">-2</span>);</span><br><span class="line">app.go(<span class="number">2</span>);</span><br><span class="line">app.go(<span class="string">'/a/b?a=1#c'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="app-redirect-url" class="article-heading"><a href="#app-redirect-url" class="headerlink" title="app.redirect(url)"></a><code>app.redirect(url)</code><a class="article-anchor" href="#app-redirect-url" aria-hidden="true"></a></h3><p>重定向当前 webview 到指定URL对应的 webview</p>
+<blockquote>
+<p>此方法属于中断式方法。</p>
+</blockquote>
+<ul>
+<li><strong>Arguments:</strong><ul>
+<li><code>{string} url</code></li>
+</ul>
+</li>
+<li><strong>Return:</strong><ul>
+<li><code>&lt;Promise&gt;</code></li>
+</ul>
+</li>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.redirect(<span class="string">'/a/b?a=1#c'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="app-link-url" class="article-heading"><a href="#app-link-url" class="headerlink" title="app.link(url)"></a><code>app.link(url)</code><a class="article-anchor" href="#app-link-url" aria-hidden="true"></a></h3><p>跳出当前SPA进入到其他页面时调用</p>
+<ul>
+<li><strong>Arguments:</strong><ul>
+<li><code>{string} url</code></li>
+</ul>
+</li>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.link(<span class="string">'//www.baidu.com/'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="app-listen" class="article-heading"><a href="#app-listen" class="headerlink" title="app.listen()"></a><code>app.listen()</code><a class="article-anchor" href="#app-listen" aria-hidden="true"></a></h3><p>让 miox 接管整个 SPA 的控制权，会自动监听会话历史变化，实际就是启动了 miox 运行时。</p>
+<h3 id="app-render-webviewConstructor-args-仅在请求响应过程中" class="article-heading"><a href="#app-render-webviewConstructor-args-仅在请求响应过程中" class="headerlink" title="app.render(webviewConstructor, args) -- 仅在请求响应过程中"></a><code>app.render(webviewConstructor, args) -- 仅在请求响应过程中</code><a class="article-anchor" href="#app-render-webviewConstructor-args-仅在请求响应过程中" aria-hidden="true"></a></h3><ul>
+<li>在没有缓存情况下，创建并挂载 webview；在有缓存情况下，获取缓存中的 webview（已挂载）</li>
+<li>将上一步取到的 webview 与当前SPA的 active webview 进行状态交换(inactive &lt;–&gt; active)</li>
+</ul>
+<p>内部会调用渲染引擎进行webview的创建，使用动画插件来完成切入切出动画。</p>
+<ul>
+<li><strong>Arguments:</strong><ul>
+<li><code>{vueComponent | React.Component | ...} webviewConstructor</code> webview构造函数</li>
+<li><code>{object|undefined} args</code> 额外参数</li>
+</ul>
+</li>
+<li><strong>Return:</strong><ul>
+<li><code>&lt;Promise&gt;</code></li>
+</ul>
+</li>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./home.vue'</span></span><br><span class="line">app.render(Home);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="app-fetch" class="article-heading"><a href="#app-fetch" class="headerlink" title="app.fetch"></a><code>app.fetch</code><a class="article-anchor" href="#app-fetch" aria-hidden="true"></a></h3><p>用于自动适应环境选择的方法，详见 SSR 相关文档。</p>
+<blockquote>
+<p>此方法仅能在SSR模式下使用</p>
+</blockquote>
+<ul>
+<li><strong>Arguments:</strong><ul>
+<li><code>{Function} client</code>  client端回调</li>
+<li><code>{Function} server</code>  server端回调</li>
+</ul>
+</li>
+<li><strong>Return:</strong><ul>
+<li><code>&lt;Promise&gt;</code></li>
+</ul>
+</li>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.fetch(<span class="keyword">async</span> () =&gt; ajax.post(<span class="string">'....'</span>, &#123; a, b, c &#125;));</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-11-14T10:36:00.000Z" itemprop="dateModified">上次更新：2017-11-14</time>
+                <a href="event.html" class="article-footer-next" title="事件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Constructor"><span class="toc-text">Constructor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Miox-options"><span class="toc-text">new Miox(options)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Property"><span class="toc-text">Property</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#app-container-setter-only"><span class="toc-text">app.container -- setter only</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-element-getter-only"><span class="toc-text">app.element -- getter only</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-request"><span class="toc-text">app.request</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#app-use-middleware"><span class="toc-text">app.use(middleware)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-push-url"><span class="toc-text">app.push(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-replace-url"><span class="toc-text">app.replace(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-go-step-app-go-url"><span class="toc-text">app.go(step) / app.go(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-redirect-url"><span class="toc-text">app.redirect(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-link-url"><span class="toc-text">app.link(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-listen"><span class="toc-text">app.listen()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-render-webviewConstructor-args-仅在请求响应过程中"><span class="toc-text">app.render(webviewConstructor, args) -- 仅在请求响应过程中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-fetch"><span class="toc-text">app.fetch</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">核心</strong><a href="index.html" class="sidebar-link current">接口</a><a href="event.html" class="sidebar-link">事件</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://github.com/cevio" target="_blank">沈赟杰</a><br>
+      Documentation licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.
+    </div>
+    <!--<div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/51nb/miox" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>-->
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/zh-cn/api/" class="mobile-nav-link">API</a><a href="/plugins/" class="mobile-nav-link">插件</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/51nb/miox" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">核心</strong><a href="index.html" class="mobile-nav-link current">接口</a><a href="event.html" class="mobile-nav-link">事件</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="api/index.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="/build/js/main-8827054328.js"></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>

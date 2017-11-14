@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>编写插件 | Miox</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://miox.u51.com/zh-cn/docs/make_plugin.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://miox.u51.com/docs/make_plugin.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://miox.u51.com/zh-cn/docs/make_plugin.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-a475bf266d.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Miox">
+  <!-- Open Graph -->
+  <meta name="description" content="miox 的插件主要有三类：  桥接 miox 和视图库（vue/react等）的渲染引擎，官方提供了 miox-vue2x，miox-react 定义 webview 切换时的动画效果，官方提供了 miox-animation 表达路由关系的 router，官方提供了 moix-router  渲染引擎插件要实现一个">
+<meta property="og:type" content="website">
+<meta property="og:title" content="编写插件">
+<meta property="og:url" content="https://miox.u51.com/zh-cn/docs/make_plugin.html">
+<meta property="og:site_name" content="Miox">
+<meta property="og:description" content="miox 的插件主要有三类：  桥接 miox 和视图库（vue/react等）的渲染引擎，官方提供了 miox-vue2x，miox-react 定义 webview 切换时的动画效果，官方提供了 miox-animation 表达路由关系的 router，官方提供了 moix-router  渲染引擎插件要实现一个渲染引擎，关键在于了解 Miox 中 webview 的生命周期行为，核心是实现">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://pic.51zhangdan.com/u51/storage/b9/ba2ca210-e955-8ac2-fa4c-446e96b7d4c9.png">
+<meta property="og:updated_time" content="2017-11-14T10:23:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编写插件">
+<meta name="twitter:description" content="miox 的插件主要有三类：  桥接 miox 和视图库（vue/react等）的渲染引擎，官方提供了 miox-vue2x，miox-react 定义 webview 切换时的动画效果，官方提供了 miox-animation 表达路由关系的 router，官方提供了 moix-router  渲染引擎插件要实现一个渲染引擎，关键在于了解 Miox 中 webview 的生命周期行为，核心是实现">
+<meta name="twitter:image" content="https://pic.51zhangdan.com/u51/storage/b9/ba2ca210-e955-8ac2-fa4c-446e96b7d4c9.png">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/zh-cn/api/" class="main-nav-link">API</a><a href="/plugins/" class="main-nav-link">插件</a>
+      <a href="https://github.com/51nb/miox" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap" style="display:none">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap" style="display:none">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/make_plugin.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">编写插件</h1>
+                <a href="https://github.com/51nb/miox-doc/edit/master/source/zh-cn/docs/make_plugin.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>miox 的插件主要有三类：</p>
+<ul>
+<li>桥接 miox 和视图库（vue/react等）的渲染引擎，官方提供了 <code>miox-vue2x</code>，<code>miox-react</code></li>
+<li>定义 webview 切换时的动画效果，官方提供了 <code>miox-animation</code></li>
+<li>表达路由关系的 router，官方提供了 <code>moix-router</code></li>
+</ul>
+<h2 id="渲染引擎插件" class="article-heading"><a href="#渲染引擎插件" class="headerlink" title="渲染引擎插件"></a>渲染引擎插件<a class="article-anchor" href="#渲染引擎插件" aria-hidden="true"></a></h2><p>要实现一个渲染引擎，关键在于了解 Miox 中 webview 的生命周期行为，核心是实现如下四个函数：</p>
+<ul>
+<li><code>create(webviewConstructor)</code></li>
+<li><code>destroy(webview)</code></li>
+<li><code>enter(webview)</code></li>
+<li><code>leave(webview)</code></li>
+</ul>
+<p>以 <code>miox-react</code> 为例，从调用关系来看，miox 调用 <code>miox-react</code>，<code>miox-reaxt</code> 调用 <code>react</code>。</p>
+<p>一个简单的渲染引擎可以如下实现：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDom <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ReactEngine</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(app) &#123;</span><br><span class="line">        <span class="keyword">this</span>.app = app;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 实现 webview 的创建</span></span><br><span class="line">    <span class="keyword">async</span> create(webviewConstructor) &#123;</span><br><span class="line">        <span class="keyword">const</span> webviewMountElement = <span class="keyword">this</span>._createWebviewMountElement();</span><br><span class="line">        <span class="keyword">const</span> webview = ReactDom.render(</span><br><span class="line">            React.createElement(webviewConstructor), webviewMountElement</span><br><span class="line">        );</span><br><span class="line">        <span class="keyword">return</span> webview;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 实现 webview 的销毁</span></span><br><span class="line">    <span class="keyword">async</span> destroy(webview) &#123;</span><br><span class="line">        <span class="keyword">const</span> webviewMountElement = <span class="keyword">this</span>._getWebviewMountElement(webview);</span><br><span class="line">        ReactDom.unmountComponentAtNode(webviewMountElement);</span><br><span class="line">        webviewMountElement.remove();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 通知 webview 发生了 enter</span></span><br><span class="line">    <span class="keyword">async</span> enter(webview) &#123;</span><br><span class="line">        webview.webviewDidEnter &amp;&amp; webview.webviewDidEnter();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 通知 webview 发生了 leave</span></span><br><span class="line">    <span class="keyword">async</span> leave(webview) &#123;</span><br><span class="line">        webview.webviewDidLeave &amp;&amp; webview.webviewDidLeave();</span><br><span class="line">    &#125;</span><br><span class="line">    _createWebviewMountElement() &#123;</span><br><span class="line">        <span class="keyword">const</span> webviewMountElement = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">        webviewMountElement.classList.add(<span class="string">'mx-webview'</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> webviewsElement = <span class="keyword">this</span>.app.element;</span><br><span class="line">        webviewsElement.appendChild(webviewMountElement);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> webviewMountElement;</span><br><span class="line">    &#125;</span><br><span class="line">    _getWebviewMountElement(webview) &#123;</span><br><span class="line">        <span class="keyword">return</span> webview.parentNode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">install</span>(<span class="params">app</span>) </span>&#123;</span><br><span class="line">    app.set(<span class="string">'engine'</span>, ReactEngine);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="过渡动画插件" class="article-heading"><a href="#过渡动画插件" class="headerlink" title="过渡动画插件"></a>过渡动画插件<a class="article-anchor" href="#过渡动画插件" aria-hidden="true"></a></h2><p>要实现过渡动画的插件，开发者有几件事情要做：</p>
+<ul>
+<li>通过 CSS 定义过渡动画效果，可以用 CSS 的 <code>transition</code>/<code>animation</code></li>
+<li>实现 <code>enter</code>/<code>leave</code> 函数，miox 会在对应 webview 切入/切出时调用这两个函数</li>
+<li>通过 <code>miox.history.direction</code> 来确定动画方向，-1表示后退；0表示未知；1表示前进</li>
+</ul>
+<p>核心代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 引入过渡动画相关的样式</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'./index.scss'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Transition</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(app) &#123;</span><br><span class="line">        <span class="keyword">this</span>.app = app;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 由 miox 调用</span></span><br><span class="line">    <span class="keyword">async</span> enter(webviewElement) &#123;</span><br><span class="line">        <span class="keyword">await</span> _transition(webviewElement, <span class="string">"enter"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 由 miox 调用</span></span><br><span class="line">    <span class="keyword">async</span> leave(webviewElement) &#123;</span><br><span class="line">        <span class="keyword">await</span> _transition(webviewElement, <span class="string">"leave"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">async</span> _transition(webviewElement, enterOrLeave) &#123;</span><br><span class="line">        <span class="keyword">const</span> direction = <span class="keyword">this</span>.app.history.direction;</span><br><span class="line">        <span class="keyword">const</span> classname = <span class="string">`page-slide-<span class="subst">$&#123;enterOrLeave&#125;</span>-when-history-<span class="subst">$&#123;direction&#125;</span>`</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 该 classname 对应的 css 动画/过渡需要插件开发者自己编写</span></span><br><span class="line">        webviewElement.classList.add(classname);</span><br><span class="line">        <span class="keyword">await</span> _transitionEnd(webviewElement);</span><br><span class="line">        webviewElement.classList.remove(classname);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> (app) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Transition(app);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="router-插件" class="article-heading"><a href="#router-插件" class="headerlink" title="router 插件"></a>router 插件<a class="article-anchor" href="#router-插件" aria-hidden="true"></a></h2><p>miox 内部采用了 koa 的中间件设计来处理请求响应。<br>在一次请求响应处理过程中，开发者可以获取到当前请求的URL信息，并渲染对应的 webview。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.use(<span class="keyword">async</span> (app, next) =&gt; &#123;</span><br><span class="line">    app.request.hostname,</span><br><span class="line">    app.request.pathname,</span><br><span class="line">    ...</span><br><span class="line">    app.render(webviewConstructor, args);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="其他插件" class="article-heading"><a href="#其他插件" class="headerlink" title="其他插件"></a>其他插件<a class="article-anchor" href="#其他插件" aria-hidden="true"></a></h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.install(callback: <span class="function"><span class="keyword">function</span>(<span class="params">app</span>)</span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<p>比如写一个 frameset 效果的插件，可以如下</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.install(<span class="function"><span class="keyword">function</span>(<span class="params">app</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> doc = <span class="built_in">window</span>.document;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> div = doc.createElement(<span class="string">"div"</span>);</span><br><span class="line">    div.classList.add(<span class="string">"frame-set"</span>);</span><br><span class="line">    <span class="keyword">var</span> navFrame = doc.createElement(<span class="string">"div"</span>);</span><br><span class="line">    navFrame.classList.add(<span class="string">"frame-item"</span>);</span><br><span class="line">    <span class="keyword">var</span> contentFrame = doc.createElement(<span class="string">"div"</span>);</span><br><span class="line">    contentFrame.classList.add(<span class="string">"frame-item"</span>);</span><br><span class="line"></span><br><span class="line">    div.appendChild(navFrame);</span><br><span class="line">    div.appendChild(contentFrame);</span><br><span class="line">    doc.body.appendChild(div);</span><br><span class="line"></span><br><span class="line">    app.set(<span class="string">"container"</span>, contentFrame);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>DOM 结构就会如下所示：</p>
+<p><img src="https://pic.51zhangdan.com/u51/storage/b9/ba2ca210-e955-8ac2-fa4c-446e96b7d4c9.png" alt=""></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-11-14T10:23:33.000Z" itemprop="dateModified">上次更新：2017-11-14</time>
+                <a href="miox_dom_tree.html" class="article-footer-prev" title="Miox Dom 树"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="use_ssr.html" class="article-footer-next" title="使用服务端渲染"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#渲染引擎插件"><span class="toc-text">渲染引擎插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过渡动画插件"><span class="toc-text">过渡动画插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router-插件"><span class="toc-text">router 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他插件"><span class="toc-text">其他插件</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">快速入门</strong><a href="index.html" class="sidebar-link">什么是Miox?</a><a href="setup.html" class="sidebar-link">安装</a><a href="hello_world.html" class="sidebar-link">Hello World</a><a href="miox_css.html" class="sidebar-link">Miox Css</a><strong class="sidebar-title">进阶</strong><a href="miox_runtime.html" class="sidebar-link">Miox运行时</a><a href="miox_dom_tree.html" class="sidebar-link">Miox Dom 树</a><a href="make_plugin.html" class="sidebar-link current">编写插件</a><a href="use_ssr.html" class="sidebar-link">使用服务端渲染</a><strong class="sidebar-title">官方插件</strong><a href="miox_router.html" class="sidebar-link">Miox Router</a><a href="miox_animate.html" class="sidebar-link">Miox Animate</a><a href="miox_vue2x.html" class="sidebar-link">Miox Vue2x Engine</a><a href="miox_react.html" class="sidebar-link">Miox React Engine</a><a href="miox_vue2x_classify.html" class="sidebar-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="sidebar-link">Miox Vue2x Container</a><strong class="sidebar-title">贡献</strong><a href="contribution_code.html" class="sidebar-link">贡献代码</a><a href="contribution_code_list.html" class="sidebar-link">代码结构总览</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://github.com/cevio" target="_blank">沈赟杰</a><br>
+      Documentation licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.
+    </div>
+    <!--<div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/51nb/miox" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>-->
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/zh-cn/api/" class="mobile-nav-link">API</a><a href="/plugins/" class="mobile-nav-link">插件</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/51nb/miox" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速入门</strong><a href="index.html" class="mobile-nav-link">什么是Miox?</a><a href="setup.html" class="mobile-nav-link">安装</a><a href="hello_world.html" class="mobile-nav-link">Hello World</a><a href="miox_css.html" class="mobile-nav-link">Miox Css</a><strong class="mobile-nav-title">进阶</strong><a href="miox_runtime.html" class="mobile-nav-link">Miox运行时</a><a href="miox_dom_tree.html" class="mobile-nav-link">Miox Dom 树</a><a href="make_plugin.html" class="mobile-nav-link current">编写插件</a><a href="use_ssr.html" class="mobile-nav-link">使用服务端渲染</a><strong class="mobile-nav-title">官方插件</strong><a href="miox_router.html" class="mobile-nav-link">Miox Router</a><a href="miox_animate.html" class="mobile-nav-link">Miox Animate</a><a href="miox_vue2x.html" class="mobile-nav-link">Miox Vue2x Engine</a><a href="miox_react.html" class="mobile-nav-link">Miox React Engine</a><a href="miox_vue2x_classify.html" class="mobile-nav-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="mobile-nav-link">Miox Vue2x Container</a><strong class="mobile-nav-title">贡献</strong><a href="contribution_code.html" class="mobile-nav-link">贡献代码</a><a href="contribution_code_list.html" class="mobile-nav-link">代码结构总览</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/make_plugin.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="/build/js/main-8827054328.js"></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Miox Runtime | Miox</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://miox.u51.com/zh-cn/docs/miox_runtime.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://miox.u51.com/docs/miox_runtime.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://miox.u51.com/zh-cn/docs/miox_runtime.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-a475bf266d.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Miox">
+  <!-- Open Graph -->
+  <meta name="description" content="Miox 会始终监听(listen)会话历史变化，当会话历史变化后，miox 会取到接下来要呈现的 URL，然后进行路由匹配映射到具体的 webview。从 URL 到 webview 的单次请求响应过程，Miox 采用了 koa 的中间件设计。 Koa Middleware app.use(async (ctx, n">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Miox Runtime">
+<meta property="og:url" content="https://miox.u51.com/zh-cn/docs/miox_runtime.html">
+<meta property="og:site_name" content="Miox">
+<meta property="og:description" content="Miox 会始终监听(listen)会话历史变化，当会话历史变化后，miox 会取到接下来要呈现的 URL，然后进行路由匹配映射到具体的 webview。从 URL 到 webview 的单次请求响应过程，Miox 采用了 koa 的中间件设计。 Koa Middleware app.use(async (ctx, next) =&amp;gt; &amp;#123;   await ctx.render(tem">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://pic.51zhangdan.com/u51/storage/cc/cf3f57a2-cf7c-ff70-0a90-9aea331f38dc.png">
+<meta property="og:updated_time" content="2017-11-14T10:22:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Miox Runtime">
+<meta name="twitter:description" content="Miox 会始终监听(listen)会话历史变化，当会话历史变化后，miox 会取到接下来要呈现的 URL，然后进行路由匹配映射到具体的 webview。从 URL 到 webview 的单次请求响应过程，Miox 采用了 koa 的中间件设计。 Koa Middleware app.use(async (ctx, next) =&amp;gt; &amp;#123;   await ctx.render(tem">
+<meta name="twitter:image" content="https://pic.51zhangdan.com/u51/storage/cc/cf3f57a2-cf7c-ff70-0a90-9aea331f38dc.png">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/zh-cn/api/" class="main-nav-link">API</a><a href="/plugins/" class="main-nav-link">插件</a>
+      <a href="https://github.com/51nb/miox" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap" style="display:none">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap" style="display:none">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/miox_runtime.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Miox Runtime</h1>
+                <a href="https://github.com/51nb/miox-doc/edit/master/source/zh-cn/docs/miox_runtime.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>Miox 会始终监听(listen)会话历史变化，<br>当会话历史变化后，miox 会取到接下来要呈现的 URL，然后进行路由匹配映射到具体的 webview。<br>从 URL 到 webview 的单次请求响应过程，Miox 采用了 koa 的中间件设计。</p>
+<p><strong>Koa Middleware</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">   <span class="keyword">await</span> ctx.render(template, data);</span><br><span class="line">   <span class="keyword">await</span> next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>Miox Middleware</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">   <span class="keyword">await</span> ctx.render(webviewConstructor, args)</span><br><span class="line">   <span class="keyword">await</span> next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在进入中间件处理过程前，miox 会派发一个名为 <code>process:start</code> 事件，所有中间件全部执行结束后，会派发 <code>process:end</code> 事件。</p>
+<p>开发者可以直接编写中间件控制 miox 的执行逻辑。在所有中间件中，有一个核心中间件称为路由(router)，官方提供了 <code>miox-router</code> 插件。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'miox-router'</span>;</span><br><span class="line"><span class="keyword">const</span> route = <span class="keyword">new</span> Router();</span><br><span class="line">route.patch(<span class="string">'/'</span>, <span class="keyword">async</span> ctx =&gt; <span class="keyword">await</span> ctx.render(PageA));</span><br><span class="line">app.on(<span class="string">'process:start'</span>, () =&gt; &#123;&#125;);</span><br><span class="line">app.on(<span class="string">'process:end'</span>, () =&gt; &#123;&#125;);</span><br><span class="line"><span class="comment">// route.routes 实际就是返回一个中间件</span></span><br><span class="line">app.use(route.routes());</span><br></pre></td></tr></table></figure>
+<h2 id="Render-Service" class="article-heading"><a href="#Render-Service" class="headerlink" title="Render Service"></a>Render Service<a class="article-anchor" href="#Render-Service" aria-hidden="true"></a></h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">route.patch(<span class="string">'/'</span>, <span class="keyword">async</span> ctx =&gt; <span class="keyword">await</span> ctx.render(PageA));</span><br></pre></td></tr></table></figure>
+<p>Miox 提供了<strong>render</strong>函数来渲染视图。<br>这种路由对应一个<strong>function</strong>回调的机制我们称为<strong>动态路由机制</strong>。它决定了路由不再仅仅对应页面，而是通过逻辑来动态对应。</p>
+<blockquote>
+<p>比如说，我在A页面未登录状态下登陆，进入B页面，再从B页面回到A页面，那么A页面不再是之前的未登录页面。对比传统的做法，那么从B回到A的时候，A还是未登入页面。</p>
+</blockquote>
+<p><strong>Render Service</strong>还提供缓存webview功能，即<strong>尽可能最大限度复用webview</strong>。</p>
+<p>如果我们在SPA中一直重新渲染同一个页面，那么势必会花大量时间来进行 webview 创建销毁，因此 miox 会智能管理 webview，当某个 webview 变成 inactive 时，miox 会根据当前运行状态选择销毁还是缓存该 webview。开发者通过 <code>mixoOptions.max</code> 参数来控制最大缓存webview的数量，让浏览器保持性能稳定。通过记录用户在SPA中会话历史(session history)，miox 能算出哪些 webview 可以被缓存，哪些需要销毁。</p>
+<p>具体源码参看：<a href="https://github.com/51nb/miox/blob/master/src/miox/src/lib/render.js#L61" target="_blank" rel="noopener">miox/src/miox/build/lib/render.js:61</a></p>
+<p>而你无需关心这些，您这样操作一下的步骤即可：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">await</span> ctx.render(webviewConstructor, options);</span><br></pre></td></tr></table></figure>
+<h2 id="Miox-runtime-loop" class="article-heading"><a href="#Miox-runtime-loop" class="headerlink" title="Miox runtime loop"></a>Miox runtime loop<a class="article-anchor" href="#Miox-runtime-loop" aria-hidden="true"></a></h2><p><img src="https://pic.51zhangdan.com/u51/storage/cc/cf3f57a2-cf7c-ff70-0a90-9aea331f38dc.png" alt="runtime loop"></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-11-14T10:22:04.000Z" itemprop="dateModified">上次更新：2017-11-14</time>
+                <a href="miox_css.html" class="article-footer-prev" title="Miox Css"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="miox_dom_tree.html" class="article-footer-next" title="Miox Dom 树"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Render-Service"><span class="toc-text">Render Service</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Miox-runtime-loop"><span class="toc-text">Miox runtime loop</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">快速入门</strong><a href="index.html" class="sidebar-link">什么是Miox?</a><a href="setup.html" class="sidebar-link">安装</a><a href="hello_world.html" class="sidebar-link">Hello World</a><a href="miox_css.html" class="sidebar-link">Miox Css</a><strong class="sidebar-title">进阶</strong><a href="miox_runtime.html" class="sidebar-link current">Miox运行时</a><a href="miox_dom_tree.html" class="sidebar-link">Miox Dom 树</a><a href="make_plugin.html" class="sidebar-link">编写插件</a><a href="use_ssr.html" class="sidebar-link">使用服务端渲染</a><strong class="sidebar-title">官方插件</strong><a href="miox_router.html" class="sidebar-link">Miox Router</a><a href="miox_animate.html" class="sidebar-link">Miox Animate</a><a href="miox_vue2x.html" class="sidebar-link">Miox Vue2x Engine</a><a href="miox_react.html" class="sidebar-link">Miox React Engine</a><a href="miox_vue2x_classify.html" class="sidebar-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="sidebar-link">Miox Vue2x Container</a><strong class="sidebar-title">贡献</strong><a href="contribution_code.html" class="sidebar-link">贡献代码</a><a href="contribution_code_list.html" class="sidebar-link">代码结构总览</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://github.com/cevio" target="_blank">沈赟杰</a><br>
+      Documentation licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.
+    </div>
+    <!--<div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/51nb/miox" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>-->
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/zh-cn/api/" class="mobile-nav-link">API</a><a href="/plugins/" class="mobile-nav-link">插件</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/51nb/miox" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速入门</strong><a href="index.html" class="mobile-nav-link">什么是Miox?</a><a href="setup.html" class="mobile-nav-link">安装</a><a href="hello_world.html" class="mobile-nav-link">Hello World</a><a href="miox_css.html" class="mobile-nav-link">Miox Css</a><strong class="mobile-nav-title">进阶</strong><a href="miox_runtime.html" class="mobile-nav-link current">Miox运行时</a><a href="miox_dom_tree.html" class="mobile-nav-link">Miox Dom 树</a><a href="make_plugin.html" class="mobile-nav-link">编写插件</a><a href="use_ssr.html" class="mobile-nav-link">使用服务端渲染</a><strong class="mobile-nav-title">官方插件</strong><a href="miox_router.html" class="mobile-nav-link">Miox Router</a><a href="miox_animate.html" class="mobile-nav-link">Miox Animate</a><a href="miox_vue2x.html" class="mobile-nav-link">Miox Vue2x Engine</a><a href="miox_react.html" class="mobile-nav-link">Miox React Engine</a><a href="miox_vue2x_classify.html" class="mobile-nav-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="mobile-nav-link">Miox Vue2x Container</a><strong class="mobile-nav-title">贡献</strong><a href="contribution_code.html" class="mobile-nav-link">贡献代码</a><a href="contribution_code_list.html" class="mobile-nav-link">代码结构总览</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/miox_runtime.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="/build/js/main-8827054328.js"></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>

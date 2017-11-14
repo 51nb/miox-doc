@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>miox-router | Miox</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://miox.u51.com/zh-cn/docs/miox_router.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://miox.u51.com/docs/miox_router.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://miox.u51.com/zh-cn/docs/miox_router.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-a475bf266d.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Miox">
+  <!-- Open Graph -->
+  <meta name="description" content="miox-router 是专注于高效表达路由关系的一个插件。 对 nodejs 的 koa 熟悉的开发者或许已经发现，miox 采用了 koa 的中间件(middleware)机制，因此 miox-router 本质上是一个专注于路由功能的中间件，miox-router 在设计和实现上也高度还原了 koa-router">
+<meta property="og:type" content="website">
+<meta property="og:title" content="miox-router">
+<meta property="og:url" content="https://miox.u51.com/zh-cn/docs/miox_router.html">
+<meta property="og:site_name" content="Miox">
+<meta property="og:description" content="miox-router 是专注于高效表达路由关系的一个插件。 对 nodejs 的 koa 熟悉的开发者或许已经发现，miox 采用了 koa 的中间件(middleware)机制，因此 miox-router 本质上是一个专注于路由功能的中间件，miox-router 在设计和实现上也高度还原了 koa-router，这使得对 koa 与 koa-router 熟悉的开发者能够更快速地上手。">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-11-14T10:25:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="miox-router">
+<meta name="twitter:description" content="miox-router 是专注于高效表达路由关系的一个插件。 对 nodejs 的 koa 熟悉的开发者或许已经发现，miox 采用了 koa 的中间件(middleware)机制，因此 miox-router 本质上是一个专注于路由功能的中间件，miox-router 在设计和实现上也高度还原了 koa-router，这使得对 koa 与 koa-router 熟悉的开发者能够更快速地上手。">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/zh-cn/api/" class="main-nav-link">API</a><a href="/plugins/" class="main-nav-link">插件</a>
+      <a href="https://github.com/51nb/miox" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap" style="display:none">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap" style="display:none">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/miox_router.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">miox-router</h1>
+                <a href="https://github.com/51nb/miox-doc/edit/master/source/zh-cn/docs/miox_router.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p><code>miox-router</code> 是专注于高效表达路由关系的一个插件。</p>
+<p>对 nodejs 的 <a href="https://www.npmjs.com/package/koa" target="_blank" rel="noopener">koa</a> 熟悉的开发者或许已经发现，miox 采用了 koa 的中间件(middleware)机制，<br>因此 miox-router 本质上是一个专注于路由功能的中间件，miox-router 在设计和实现上也高度还原了 <a href="https://www.npmjs.com/package/koa-router" target="_blank" rel="noopener">koa-router</a>，<br>这使得对 koa 与 <code>koa-router</code> 熟悉的开发者能够更快速地上手。</p>
+<blockquote>
+<p>koa: Expressive HTTP middleware framework to make web applications and APIs more enjoyable to write</p>
+<p>koa-router: Router middleware for koa</p>
+</blockquote>
+<p>也可以说，miox-router 是一个运行在浏览器中的简化版的 koa-router。</p>
+<h2 id="与其他-SPA-router-相比" class="article-heading"><a href="#与其他-SPA-router-相比" class="headerlink" title="与其他 SPA router 相比"></a>与其他 SPA router 相比<a class="article-anchor" href="#与其他-SPA-router-相比" aria-hidden="true"></a></h2><p>miox-router 所提供的功能与传统web后端的 router 更相似，但不同于 react-router/vue-router。<br>miox-router 的哲学是：</p>
+<ul>
+<li>miox-router 不提供 push/go/replace 等与会话历史交互的方法，专注于表达URL到Webview的映射逻辑这一个任务</li>
+<li>miox 会在每次会话历史变化后传递一个 URL 给 miox-router，miox-router 根据该URL渲染对应的 webview</li>
+<li>一个 URL 所响应的 webview 不是静态映射，而是可编程的</li>
+</ul>
+<blockquote>
+<p>push/go/replace 等与会话历史交互的方法由 miox 提供，这与 location、history 等方法由浏览器提供是等价的。</p>
+<p>与传统web开发不同，在 miox 中每次会话历史变化都会执行路由处理。</p>
+</blockquote>
+<h2 id="API" class="article-heading"><a href="#API" class="headerlink" title="API"></a>API<a class="article-anchor" href="#API" aria-hidden="true"></a></h2><h3 id="new-Router" class="article-heading"><a href="#new-Router" class="headerlink" title="new Router()"></a>new Router()<a class="article-anchor" href="#new-Router" aria-hidden="true"></a></h3><p>创建一个新的 router。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Router = <span class="built_in">require</span>(<span class="string">'miox-router'</span>);</span><br><span class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> Router();</span><br></pre></td></tr></table></figure>
+<h3 id="router-patch-gt-router" class="article-heading"><a href="#router-patch-gt-router" class="headerlink" title="router.patch ==&gt; router"></a>router.patch ==&gt; router<a class="article-anchor" href="#router-patch-gt-router" aria-hidden="true"></a></h3><p>定义一条新的 route 规则，将特定的URL模式与回调函数进行关联。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">router</span><br><span class="line">    .patch(<span class="string">'/'</span>, <span class="keyword">async</span> (app, next) =&gt; &#123;</span><br><span class="line">        <span class="keyword">await</span> app.render(Home);</span><br><span class="line">    &#125;)</span><br><span class="line">    .patch(<span class="string">'/user/:id'</span>, <span class="keyword">async</span> (app, next) =&gt; &#123;</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">await</span> app.render(User);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="URL-parameters" class="article-heading"><a href="#URL-parameters" class="headerlink" title="URL parameters"></a>URL parameters<a class="article-anchor" href="#URL-parameters" aria-hidden="true"></a></h3><p>URL路径上的命名参数可以通过 app.params 来访问。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">router.patch(<span class="string">'/:category/:title'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">app, next</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(app.params);</span><br><span class="line">    <span class="comment">// =&gt; &#123; category: 'xxx', title: 'xxx' &#125;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="router-routes-gt-middleware-function" class="article-heading"><a href="#router-routes-gt-middleware-function" class="headerlink" title="router.routes ==&gt; middleware function"></a>router.routes ==&gt; middleware function<a class="article-anchor" href="#router-routes-gt-middleware-function" aria-hidden="true"></a></h3><p>将配置的路由规则合并起来，组装成一个中间件，给 miox 使用。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.use(router.routes());</span><br></pre></td></tr></table></figure>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-11-14T10:25:22.000Z" itemprop="dateModified">上次更新：2017-11-14</time>
+                <a href="use_ssr.html" class="article-footer-prev" title="使用服务端渲染"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="miox_animate.html" class="article-footer-next" title="Miox Animate"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#与其他-SPA-router-相比"><span class="toc-text">与其他 SPA router 相比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-text">API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Router"><span class="toc-text">new Router()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#router-patch-gt-router"><span class="toc-text">router.patch ==> router</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URL-parameters"><span class="toc-text">URL parameters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#router-routes-gt-middleware-function"><span class="toc-text">router.routes ==> middleware function</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">快速入门</strong><a href="index.html" class="sidebar-link">什么是Miox?</a><a href="setup.html" class="sidebar-link">安装</a><a href="hello_world.html" class="sidebar-link">Hello World</a><a href="miox_css.html" class="sidebar-link">Miox Css</a><strong class="sidebar-title">进阶</strong><a href="miox_runtime.html" class="sidebar-link">Miox运行时</a><a href="miox_dom_tree.html" class="sidebar-link">Miox Dom 树</a><a href="make_plugin.html" class="sidebar-link">编写插件</a><a href="use_ssr.html" class="sidebar-link">使用服务端渲染</a><strong class="sidebar-title">官方插件</strong><a href="miox_router.html" class="sidebar-link current">Miox Router</a><a href="miox_animate.html" class="sidebar-link">Miox Animate</a><a href="miox_vue2x.html" class="sidebar-link">Miox Vue2x Engine</a><a href="miox_react.html" class="sidebar-link">Miox React Engine</a><a href="miox_vue2x_classify.html" class="sidebar-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="sidebar-link">Miox Vue2x Container</a><strong class="sidebar-title">贡献</strong><a href="contribution_code.html" class="sidebar-link">贡献代码</a><a href="contribution_code_list.html" class="sidebar-link">代码结构总览</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://github.com/cevio" target="_blank">沈赟杰</a><br>
+      Documentation licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.
+    </div>
+    <!--<div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/51nb/miox" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>-->
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/zh-cn/api/" class="mobile-nav-link">API</a><a href="/plugins/" class="mobile-nav-link">插件</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/51nb/miox" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速入门</strong><a href="index.html" class="mobile-nav-link">什么是Miox?</a><a href="setup.html" class="mobile-nav-link">安装</a><a href="hello_world.html" class="mobile-nav-link">Hello World</a><a href="miox_css.html" class="mobile-nav-link">Miox Css</a><strong class="mobile-nav-title">进阶</strong><a href="miox_runtime.html" class="mobile-nav-link">Miox运行时</a><a href="miox_dom_tree.html" class="mobile-nav-link">Miox Dom 树</a><a href="make_plugin.html" class="mobile-nav-link">编写插件</a><a href="use_ssr.html" class="mobile-nav-link">使用服务端渲染</a><strong class="mobile-nav-title">官方插件</strong><a href="miox_router.html" class="mobile-nav-link current">Miox Router</a><a href="miox_animate.html" class="mobile-nav-link">Miox Animate</a><a href="miox_vue2x.html" class="mobile-nav-link">Miox Vue2x Engine</a><a href="miox_react.html" class="mobile-nav-link">Miox React Engine</a><a href="miox_vue2x_classify.html" class="mobile-nav-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="mobile-nav-link">Miox Vue2x Container</a><strong class="mobile-nav-title">贡献</strong><a href="contribution_code.html" class="mobile-nav-link">贡献代码</a><a href="contribution_code_list.html" class="mobile-nav-link">代码结构总览</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/miox_router.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="/build/js/main-8827054328.js"></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>
