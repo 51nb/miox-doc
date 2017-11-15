@@ -16,9 +16,23 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/api/event.html</loc>
+    
+    <lastmod>2017-11-14T10:36:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/api/event.html</loc>
     
     <lastmod>2017-11-14T10:36:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/api/index.html</loc>
+    
+    <lastmod>2017-11-14T10:36:00.000Z</lastmod>
     
   </url>
   
@@ -30,9 +44,23 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/docs/contribution_code_list.html</loc>
+    
+    <lastmod>2017-11-14T10:29:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/docs/contribution_code_list.html</loc>
     
     <lastmod>2017-11-14T10:29:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/docs/contribution_code.html</loc>
+    
+    <lastmod>2017-11-14T10:28:48.000Z</lastmod>
     
   </url>
   
@@ -51,9 +79,30 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_vue2x_container.html</loc>
+    
+    <lastmod>2017-11-14T10:28:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_vue2x_classify.html</loc>
     
     <lastmod>2017-11-14T10:27:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_vue2x_classify.html</loc>
+    
+    <lastmod>2017-11-14T10:27:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_react.html</loc>
+    
+    <lastmod>2017-11-14T10:27:06.000Z</lastmod>
     
   </url>
   
@@ -72,7 +121,21 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_vue2x.html</loc>
+    
+    <lastmod>2017-11-14T10:26:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_animate.html</loc>
+    
+    <lastmod>2017-11-14T10:26:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_animate.html</loc>
     
     <lastmod>2017-11-14T10:26:07.000Z</lastmod>
     
@@ -86,9 +149,30 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_router.html</loc>
+    
+    <lastmod>2017-11-14T10:25:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/docs/use_ssr.html</loc>
     
     <lastmod>2017-11-14T10:24:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/docs/use_ssr.html</loc>
+    
+    <lastmod>2017-11-14T10:24:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/docs/make_plugin.html</loc>
+    
+    <lastmod>2017-11-14T10:23:33.000Z</lastmod>
     
   </url>
   
@@ -107,6 +191,20 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_dom_tree.html</loc>
+    
+    <lastmod>2017-11-14T10:22:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_runtime.html</loc>
+    
+    <lastmod>2017-11-14T10:22:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_runtime.html</loc>
     
     <lastmod>2017-11-14T10:22:04.000Z</lastmod>
@@ -121,7 +219,21 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_css.html</loc>
+    
+    <lastmod>2017-11-14T10:21:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/docs/hello_world.html</loc>
+    
+    <lastmod>2017-11-14T10:19:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/docs/hello_world.html</loc>
     
     <lastmod>2017-11-14T10:19:16.000Z</lastmod>
     
@@ -135,6 +247,13 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/docs/setup.html</loc>
+    
+    <lastmod>2017-11-14T10:18:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/docs/index.html</loc>
     
     <lastmod>2017-11-14T10:14:51.000Z</lastmod>
@@ -142,189 +261,14 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/api/router.html</loc>
+    <loc>https://51nb.github.io/miox-doc/docs/index.html</loc>
     
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/rendering.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/tag.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/scaffolds.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/themes.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/commands.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/contributing.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/asset-folders.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/configuration.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/data-files.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/front-matter.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/deployment.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/helpers.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
+    <lastmod>2017-11-14T10:14:51.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://51nb.github.io/miox-doc/news/2014/07/13/hexo-2-8-released/</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/index.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/internationalization.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/migration.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/permalinks.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/plugins.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/server.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/setup.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/tag-plugins.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/templates.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/themes.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/variables.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/troubleshooting.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/writing.html</loc>
     
     <lastmod>2017-11-09T22:21:32.000Z</lastmod>
     
@@ -338,14 +282,7 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/news/2014/06/14/hexo-2-7-released/</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/news/2015/03/05/hexo-3-0-released/</loc>
+    <loc>https://51nb.github.io/miox-doc/about/index.html</loc>
     
     <lastmod>2017-11-09T22:21:32.000Z</lastmod>
     
@@ -359,112 +296,21 @@
   </url>
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/news/2015/03/05/hexo-3-0-released/</loc>
+    
+    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/news/2014/06/14/hexo-2-7-released/</loc>
+    
+    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/news/2015/02/27/new-documentation-and-registry/</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/about/index.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/console.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/deployer.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/box.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/generator.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/helper.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/events.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/filter.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/locals.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/index.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/migrator.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/posts.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/renderer.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/api/processor.html</loc>
-    
-    <lastmod>2017-11-09T22:21:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://51nb.github.io/miox-doc/docs/generating.html</loc>
     
     <lastmod>2017-11-09T22:21:32.000Z</lastmod>
     

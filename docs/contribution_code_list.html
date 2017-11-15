@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>核心目录结构 | Miox</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://51nb.github.io/miox-doc/zh-cn/docs/contribution_code_list.html">
+  <link rel="canonical" href="https://51nb.github.io/miox-doc/docs/contribution_code_list.html">
   <!-- Alternative links -->
   
     
@@ -30,7 +30,7 @@
       <a href="/miox-doc" id="logo">Hexo</a>
     </h1>
     <nav id="main-nav">
-      <a href="/miox-doc/zh-cn/docs/" class="main-nav-link">文档</a><a href="/miox-doc/zh-cn/api/" class="main-nav-link">API</a><a href="/miox-doc/plugins/" class="main-nav-link">插件</a>
+      <a href="/miox-doc/docs/" class="main-nav-link">文档</a><a href="/miox-doc/api/" class="main-nav-link">API</a><a href="/miox-doc/plugins/" class="main-nav-link">插件</a>
       <a href="https://github.com/51nb/miox" class="main-nav-link" target="_blank"><i class="fa fa-github-alt"></i></a>
     </nav>
     <a id="mobile-nav-toggle">
@@ -50,7 +50,7 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">核心目录结构</h1>
-                <a href="https://github.com/51nb/miox-document/edit/master/source/zh-cn/docs/contribution_code_list.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a href="https://github.com/51nb/miox-document/edit/master/source/docs/contribution_code_list.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h2 id="文件描述" class="article-heading"><a href="#文件描述" class="headerlink" title="文件描述"></a>文件描述<a class="article-anchor" href="#文件描述" aria-hidden="true"></a></h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── index.js                # 入口文件</span><br><span class="line">├── lib</span><br><span class="line">│   ├── animate.js          # 与 webview 切换，切换动画对接</span><br><span class="line">│   ├── history.js          # SPA 会话记录管理</span><br><span class="line">│   ├── index.js            # Miox 核心实现</span><br><span class="line">│   ├── plugin.js           # 集中管理渲染引擎插件和动画切换插件</span><br><span class="line">│   ├── render.js           # app.render 实现，包括 webview 的缓存实现</span><br><span class="line">│   ├── session.js          # 使用 sessionStorage 来维护 SPA 的会话历史</span><br><span class="line">│   ├── util.js</span><br><span class="line">│   └── webtree.js          # 实现 miox 顶层DOM树</span><br><span class="line">└── miox_modules</span><br><span class="line">    ├── dictionary.js       # 实现一个 observable Object</span><br><span class="line">    ├── events.js           # 实现 async event emmiter</span><br><span class="line">    ├── middleware.js       # 中间件机制，参考了 koa-middleware</span><br><span class="line">    ├── request.js          # 请求</span><br><span class="line">    └── response.js         # 响应</span><br></pre></td></tr></table></figure>
@@ -101,7 +101,7 @@
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/miox-doc/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/miox-doc/zh-cn/api/" class="mobile-nav-link">API</a><a href="/miox-doc/plugins/" class="mobile-nav-link">插件</a>
+      <a href="/miox-doc/docs/" class="mobile-nav-link">文档</a><a href="/miox-doc/api/" class="mobile-nav-link">API</a><a href="/miox-doc/plugins/" class="mobile-nav-link">插件</a>
       <li class="mobile-nav-item">
         <a href="https://github.com/51nb/miox" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
       </li>
@@ -111,12 +111,12 @@
     
   </div>
   <div id="mobile-lang-select-wrap">
-    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
     <select id="mobile-lang-select" data-canonical="docs/contribution_code_list.html">
       
-        <option value="en">English</option>
+        <option value="en" selected>English</option>
       
-        <option value="zh-cn" selected>简体中文</option>
+        <option value="zh-cn">简体中文</option>
       
     </select>
   </div>
