@@ -845,12 +845,13 @@ a.article-title:hover {
 }
 .article-content table th {
   font-weight: bold;
+  font-size: 13px;
 }
 .article-content table th,
 .article-content table td {
   padding: 5px 15px;
 }
-.article-content table tr:nth-child(2n) {
+.article-content table tbody tr:nth-child(2n + 1) {
   background: #eee;
 }
 .article-footer {
@@ -1438,6 +1439,7 @@ pre code {
   color: #4d4d4c;
   overflow: auto;
   margin: 0;
+  font-size: 13px;
 }
 .highlight table {
   margin: 0 !important;
