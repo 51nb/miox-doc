@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_vue2x_classify.html</loc>
+    
+    <lastmod>2017-11-16T05:08:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://51nb.github.io/miox-doc/docs/miox_vue2x_classify.html</loc>
     
-    <lastmod>2017-11-16T05:06:58.000Z</lastmod>
+    <lastmod>2017-11-16T05:08:45.000Z</lastmod>
     
   </url>
   
@@ -51,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/contribution_code_list.html</loc>
+    <loc>https://51nb.github.io/miox-doc/docs/contribution_code_list.html</loc>
     
     <lastmod>2017-11-14T10:29:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/docs/contribution_code_list.html</loc>
+    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/contribution_code_list.html</loc>
     
     <lastmod>2017-11-14T10:29:34.000Z</lastmod>
     
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_vue2x_container.html</loc>
-    
-    <lastmod>2017-11-14T10:28:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://51nb.github.io/miox-doc/docs/miox_vue2x_container.html</loc>
     
     <lastmod>2017-11-14T10:28:09.000Z</lastmod>
@@ -93,9 +93,9 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_vue2x_classify.html</loc>
+    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_vue2x_container.html</loc>
     
-    <lastmod>2017-11-14T10:27:37.000Z</lastmod>
+    <lastmod>2017-11-14T10:28:09.000Z</lastmod>
     
   </url>
   
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_vue2x.html</loc>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_vue2x.html</loc>
     
     <lastmod>2017-11-14T10:26:37.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/docs/miox_vue2x.html</loc>
+    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_vue2x.html</loc>
     
     <lastmod>2017-11-14T10:26:37.000Z</lastmod>
     
@@ -142,13 +142,6 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/docs/miox_router.html</loc>
-    
-    <lastmod>2017-11-14T10:25:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://51nb.github.io/miox-doc/zh-cn/docs/miox_router.html</loc>
     
     <lastmod>2017-11-14T10:25:22.000Z</lastmod>
@@ -156,9 +149,9 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/docs/use_ssr.html</loc>
+    <loc>https://51nb.github.io/miox-doc/docs/miox_router.html</loc>
     
-    <lastmod>2017-11-14T10:24:26.000Z</lastmod>
+    <lastmod>2017-11-14T10:25:22.000Z</lastmod>
     
   </url>
   
@@ -170,14 +163,21 @@
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/docs/make_plugin.html</loc>
+    <loc>https://51nb.github.io/miox-doc/docs/use_ssr.html</loc>
+    
+    <lastmod>2017-11-14T10:24:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/make_plugin.html</loc>
     
     <lastmod>2017-11-14T10:23:33.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://51nb.github.io/miox-doc/zh-cn/docs/make_plugin.html</loc>
+    <loc>https://51nb.github.io/miox-doc/docs/make_plugin.html</loc>
     
     <lastmod>2017-11-14T10:23:33.000Z</lastmod>
     
