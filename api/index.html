@@ -124,17 +124,18 @@
 <blockquote>
 <p>中间件回调函数中的 app 就是 miox 实例，且额外添加了 <code>app.request</code> 和 <code>app.render</code>。<br>调用 <code>next</code> 表示执行下一中间件。</p>
 </blockquote>
-<h3 id="app-push-url" class="article-heading"><a href="#app-push-url" class="headerlink" title="app.push(url)"></a><code>app.push(url)</code><a class="article-anchor" href="#app-push-url" aria-hidden="true"></a></h3><p>打开指定URL对应的 webview，在会话历史中清空位于当前记录后的所有记录并新增一条记录。</p>
+<h3 id="app-push-url-animate" class="article-heading"><a href="#app-push-url-animate" class="headerlink" title="app.push(url, animate)"></a><code>app.push(url, animate)</code><a class="article-anchor" href="#app-push-url-animate" aria-hidden="true"></a></h3><p>打开指定URL对应的 webview，在会话历史中清空位于当前记录后的所有记录并新增一条记录。</p>
 <ul>
 <li><strong>Arguments:</strong><ul>
 <li><code>{string} url</code></li>
+<li><code>{string} animate</code> 自定义动画名，对当前点击行为的跳转进行特殊的动画处理。</li>
 </ul>
 </li>
 <li><strong>Return:</strong><ul>
 <li><code>{Promise}</code></li>
 </ul>
 </li>
-<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.push(<span class="string">'/a/b?a=1#c'</span>);</span><br></pre></td></tr></table></figure>
+<li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.push(<span class="string">'/a/b?a=1#c'</span>);</span><br><span class="line">app.push(<span class="string">'/a/b?a=1#c'</span>, <span class="string">'push);</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="app-replace-url" class="article-heading"><a href="#app-replace-url" class="headerlink" title="app.replace(url)"></a><code>app.replace(url)</code><a class="article-anchor" href="#app-replace-url" aria-hidden="true"></a></h3><p>打开指定URL对应的 webview，在会话历史中替换当前记录。</p>
@@ -150,7 +151,7 @@
 <li><strong>Usage:</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.replace(<span class="string">'/a/b?a=1#c'</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="app-go-step-app-go-url" class="article-heading"><a href="#app-go-step-app-go-url" class="headerlink" title="app.go(step) / app.go(url)"></a><code>app.go(step)</code> / <code>app.go(url)</code><a class="article-anchor" href="#app-go-step-app-go-url" aria-hidden="true"></a></h3><ul>
+<h3 id="app-go-step-animate-app-go-url-animate" class="article-heading"><a href="#app-go-step-animate-app-go-url-animate" class="headerlink" title="app.go(step, animate) / app.go(url, animate)"></a><code>app.go(step, animate)</code> / <code>app.go(url, animate)</code><a class="article-anchor" href="#app-go-step-animate-app-go-url-animate" aria-hidden="true"></a></h3><ul>
 <li>如果参数为数字，则打开会话历史中相对当前记录距离为 step 的 URL。</li>
 <li><p>如果参数为字符串，miox 会从会话历史中搜索是否已存在该URL。</p>
 <ul>
@@ -161,6 +162,7 @@
 <li><p><strong>Arguments:</strong></p>
 <ul>
 <li><code>{number} step | {string} url</code> 相对步数，或跳转地址</li>
+<li><code>{string} animate</code> 自定义动画名，对当前点击行为的跳转进行特殊的动画处理。</li>
 </ul>
 </li>
 <li><strong>Return:</strong><ul>
@@ -233,7 +235,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2017-11-14T10:36:00.000Z" itemprop="dateModified">上次更新：2017-11-14</time>
+                <time class="article-footer-updated" datetime="2017-11-17T06:07:50.000Z" itemprop="dateModified">上次更新：2017-11-17</time>
                 <a href="event.html" class="article-footer-next" title="事件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -243,7 +245,7 @@
             <div id="article-toc-inner">
               
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Constructor"><span class="toc-text">Constructor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Miox-options"><span class="toc-text">new Miox(options)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Property"><span class="toc-text">Property</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#app-container-setter-only"><span class="toc-text">app.container -- setter only</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-element-getter-only"><span class="toc-text">app.element -- getter only</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-request"><span class="toc-text">app.request</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#app-use-middleware"><span class="toc-text">app.use(middleware)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-push-url"><span class="toc-text">app.push(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-replace-url"><span class="toc-text">app.replace(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-go-step-app-go-url"><span class="toc-text">app.go(step) / app.go(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-redirect-url"><span class="toc-text">app.redirect(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-link-url"><span class="toc-text">app.link(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-listen"><span class="toc-text">app.listen()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-render-webviewConstructor-args-仅在请求响应过程中"><span class="toc-text">app.render(webviewConstructor, args) -- 仅在请求响应过程中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-fetch"><span class="toc-text">app.fetch</span></a></li></ol></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Constructor"><span class="toc-text">Constructor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Miox-options"><span class="toc-text">new Miox(options)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Property"><span class="toc-text">Property</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#app-container-setter-only"><span class="toc-text">app.container -- setter only</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-element-getter-only"><span class="toc-text">app.element -- getter only</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-request"><span class="toc-text">app.request</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#app-use-middleware"><span class="toc-text">app.use(middleware)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-push-url-animate"><span class="toc-text">app.push(url, animate)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-replace-url"><span class="toc-text">app.replace(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-go-step-animate-app-go-url-animate"><span class="toc-text">app.go(step, animate) / app.go(url, animate)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-redirect-url"><span class="toc-text">app.redirect(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-link-url"><span class="toc-text">app.link(url)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-listen"><span class="toc-text">app.listen()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-render-webviewConstructor-args-仅在请求响应过程中"><span class="toc-text">app.render(webviewConstructor, args) -- 仅在请求响应过程中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-fetch"><span class="toc-text">app.fetch</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
