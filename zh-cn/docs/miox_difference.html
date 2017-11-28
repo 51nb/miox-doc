@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Miox 与其他主流框架的不同点 | Miox</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://51nb.github.io/miox-doc/zh-cn/docs/miox_difference.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://51nb.github.io/miox-doc/docs/miox_difference.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://51nb.github.io/miox-doc/zh-cn/docs/miox_difference.html">
+    
+  
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/miox-doc/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/miox-doc" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/miox-doc/zh-cn/docs/" class="main-nav-link">文档</a><a href="/miox-doc/zh-cn/api/" class="main-nav-link">API</a><a href="/miox-doc/plugins/" class="main-nav-link">插件</a>
+      <a href="https://github.com/51nb/miox" class="main-nav-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </nav>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Miox 与其他主流框架的不同点</h1>
+                <a href="https://github.com/51nb/miox-document/edit/master/source/zh-cn/docs/miox_difference.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <blockquote>
+<p>Miox是一个兼容多种渲染引擎的，提供高度自动化 Webview 生命周期管理的一个中间件/框架，同时提供了开箱即用的若干自动化脚手架，快速生成项目。它可以自动帮你处理路由切换、webview 生命周期管理等各种单页应用会面临的问题，让你专注于 webview 内的业务开发。Miox 实现了生命周期和路由管理的最佳实践，避免了不统一的开发方式可能造成的性能下降和错误，并且可以平滑接入SSR这样的开发技术，达到开发效率和接近原生体验两者之间的最佳平衡。Miox 并不依赖任何框架，这意味着你的业务开发无论是基于 React、Vue 还是其他框架，都可以完美的接入到其中来，无需担心是否在公司中不能使用某些框架的问题。</p>
+</blockquote>
+<p>现在主流的框架，除去<code>Angular</code>，就只有<code>Vue</code>与<code>React</code>了。它们各自有各自的路由模块。总的来说，他们的路由模式，都是遵循自己的设计原则来设计的，都是采用组件化路由的思想，达到分发路由的目的。我们基于的理念与它们完全不同。我们基于服务端MPA的思想，表现在前端以SPA模式展现。我们的路由机制遵循<code>PAGE = TEMPLATE + DATA</code>思想实现。所以我们归纳出：</p>
+<ul>
+<li><code>Miox</code>遵循后端路由思想，而<code>Vue</code>与<code>React</code>则遵循前端路由思想。</li>
+<li><code>Miox</code>的页面之间数据不互通，需要通过Store等中间产物来达到互通，理论上是完全隔离的。而<code>Vue</code>与<code>React</code>则都是组件啊，数据上可以通过顶层（父）组件传递数据下来，页面之间数据可以互通。</li>
+</ul>
+<h2 id="Vue-Router" class="article-heading"><a href="#Vue-Router" class="headerlink" title="Vue-Router"></a>Vue-Router<a class="article-anchor" href="#Vue-Router" aria-hidden="true"></a></h2><p>它是一套静态路由，不具备动态选择组件的能力，需要通过各种<code>HOOK</code>手段来达到选择组件，比如说<code>&lt;component /&gt;</code>组件等。但是在官方的文档上我们可以看到<code>动态路由匹配</code>，其实这是动态URI的概念，而非真正的动态路由概念。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    <span class="comment">// 动态路径参数 以冒号开头</span></span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/user/:id'</span>, <span class="attr">component</span>: User &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>在实际的场景中，<code>/user/:id</code>变化的任意路径都只会对应到<code>User</code>组件，而非不同的组件来渲染。所以这个概念不是很正确。如果基于后端对路由概念到理解，那么我们应该是通过这样到模式来反映出动态路由的概念。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">router.get(<span class="string">'/user/:id'</span>, ctx =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (global.opened) &#123;</span><br><span class="line">    <span class="keyword">return</span> ctx.render(webviewA);</span><br><span class="line">  &#125;</span><br><span class="line">  ctx.render(webviewB);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>这个demo中，表现出了既是动态URI，也是动态路由。</p>
+<h2 id="React-Router" class="article-heading"><a href="#React-Router" class="headerlink" title="React-Router"></a>React-Router<a class="article-anchor" href="#React-Router" aria-hidden="true"></a></h2><p><strong>React-router</strong>的V4版本，已支持动态路由的概念。而这个我们早在2年前就已经提出，经过2年时间的沉淀才开源了这个框架。它们两者的区别在于是否单一页面管理和数据是否隔离上：</p>
+<ul>
+<li><code>react-router</code>在<strong>一个页面内基于状态不同分层为不同的组件</strong>显示，做到了动态路由区分页面内容，内部可以共享顶层（父）组件数据。</li>
+<li><code>Miox</code>分为多个页面由统一的<code>service</code>服务进行管理，数据隔离，不共享页面数据。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;Route path=<span class="string">"/home"</span> render=&#123;() =&gt; &lt;div&gt;Home&lt;/div&gt;&#125;/&gt;</span><br></pre></td></tr></table></figure>
+<p>在<code>render</code>中传入的回调，即可实现动态路由分发，但是<code>React</code>还未做的是性能上的考虑。</p>
+<blockquote>
+<p>两者由于设计理念的差异，在不同的场景中各有利弊。</p>
+</blockquote>
+<p>Miox另外一个优势在于，当我们使用KOA作为我们的服务应用框架，要接入Miox的时候，由于设计理念的一致性，我们完全可以直接接管掉<code>koa-router</code>来进行自我处理，意思就是对同构非常友好。当然说回来，REACT对后端的支持也非常好，<code>next.js</code>帮我们完成了这些工作。</p>
+<p>Miox比较适合大型项目的开发，灵活的路由分层结构和服务化思想给大家带来很多类似后端书写的体验和维护体验。我们可以直接使用很多不关系<code>nodejs</code>环境变量的中间件包，而不用我们自己去重新造轮子。一套中间件也许就能直接在前端和后端同时使用，何乐而不为呢？</p>
+<h2 id="补充动态路由的性能说明" class="article-heading"><a href="#补充动态路由的性能说明" class="headerlink" title="补充动态路由的性能说明"></a>补充动态路由的性能说明<a class="article-anchor" href="#补充动态路由的性能说明" aria-hidden="true"></a></h2><p>基于后端路由理念，体系无非就是<code>页面 = 模板 + 数据</code>。从这个公式上面，您可以看到，对于一个页面的渲染，模板至关重要。在Miox的世界里，模板就是我们所谓的<code>Vue</code>或者<code>react</code>。那么什么时候创建与什么时候销毁的问题，通过后端请求的机制可以知道，当一个URL进入的时候，我们会动态根据一些变量生成出数据，同时对应选择模板来渲染。MIox也是如此。Miox其实是架设在Web端的一套服务系统，简称<code>web service</code>。Miox将使用对应的模板和数据进行页面的渲染。但是考虑浏览器端的特殊性，比如渲染性能等问题，我们需要对其作出调整。最明显的做法就是加入缓存机制，我们是用空间来换效率和性能。我们会缓存这些生成出来的对象（类似后端最终生成出来的页面），加入到内存堆栈中，通过一种动态算法来计算进入的这个URL到底是要从缓存中拿还是需要重新创建。算法可能比较复杂，您可以通过<a href="https://github.com/51nb/miox/blob/master/src/miox/src/lib/render.js" target="_blank" rel="noopener">这里</a>看下源码。我们会将浏览过的页面缓存起来，表现为节点的堆叠。当然我们也不会那么傻，节点堆叠多了，也是要影响性能的。所以在Miox启动服务之前，我们就会让用户设置一个<code>max</code>属性，让用户来选择我们最大缓存多少个页面。当每次渲染后，发现页面缓存堆栈超过了这个最大的指，那么我们会通过<code>最远距离</code>关系将那个需要被删除的页面（对象）给删除，达到一种动态平衡。</p>
+<p>再说一点比较深入的，其实我们的缓存不仅仅存在于页面堆栈，还在于您渲染的模板上，您可以通过<code>webview.dic</code>属性来看下这个模板上被缓存的一些特征。我们的原则是，路由不对应具体页面，而是对应具体页面的<code>constructor</code>原型对象。这个点，很多小伙伴由于没有看过<code>render.js</code>的实现而没能理解。这个才是缓存特性的关键，理论来讲，路由不对应页面，而是对应生成页面的原型对象。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2017-11-28T06:31:12.102Z" itemprop="dateModified">上次更新：2017-11-28</time>
+                <a href="miox_css.html" class="article-footer-prev" title="Miox Css"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="miox_runtime.html" class="article-footer-next" title="Miox运行时"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-Router"><span class="toc-text">Vue-Router</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Router"><span class="toc-text">React-Router</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#补充动态路由的性能说明"><span class="toc-text">补充动态路由的性能说明</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">快速入门</strong><a href="index.html" class="sidebar-link">什么是Miox?</a><a href="setup.html" class="sidebar-link">安装</a><a href="hello_world.html" class="sidebar-link">Hello World</a><a href="miox_css.html" class="sidebar-link">Miox Css</a><a href="miox_difference.html" class="sidebar-link current">Miox与主流框架的区别</a><strong class="sidebar-title">进阶</strong><a href="miox_runtime.html" class="sidebar-link">Miox运行时</a><a href="miox_dom_tree.html" class="sidebar-link">Miox Dom 树</a><a href="make_plugin.html" class="sidebar-link">编写插件</a><a href="use_ssr.html" class="sidebar-link">使用服务端渲染</a><strong class="sidebar-title">官方插件</strong><a href="miox_router.html" class="sidebar-link">Miox Router</a><a href="miox_animate.html" class="sidebar-link">Miox Animate</a><a href="miox_vue2x.html" class="sidebar-link">Miox Vue2x Engine</a><a href="miox_react.html" class="sidebar-link">Miox React Engine</a><a href="miox_vue2x_classify.html" class="sidebar-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="sidebar-link">Miox Vue2x Container</a><strong class="sidebar-title">贡献</strong><a href="contribution_code.html" class="sidebar-link">贡献代码</a><a href="contribution_code_list.html" class="sidebar-link">代码结构总览</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2017 <a href="https://github.com/cevio" target="_blank">沈赟杰</a><br>
+      Documentation licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.
+    </div>
+    <!--<div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/51nb/miox" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>-->
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/miox-doc/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/miox-doc/zh-cn/api/" class="mobile-nav-link">API</a><a href="/miox-doc/plugins/" class="mobile-nav-link">插件</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/51nb/miox" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速入门</strong><a href="index.html" class="mobile-nav-link">什么是Miox?</a><a href="setup.html" class="mobile-nav-link">安装</a><a href="hello_world.html" class="mobile-nav-link">Hello World</a><a href="miox_css.html" class="mobile-nav-link">Miox Css</a><a href="miox_difference.html" class="mobile-nav-link current">Miox与主流框架的区别</a><strong class="mobile-nav-title">进阶</strong><a href="miox_runtime.html" class="mobile-nav-link">Miox运行时</a><a href="miox_dom_tree.html" class="mobile-nav-link">Miox Dom 树</a><a href="make_plugin.html" class="mobile-nav-link">编写插件</a><a href="use_ssr.html" class="mobile-nav-link">使用服务端渲染</a><strong class="mobile-nav-title">官方插件</strong><a href="miox_router.html" class="mobile-nav-link">Miox Router</a><a href="miox_animate.html" class="mobile-nav-link">Miox Animate</a><a href="miox_vue2x.html" class="mobile-nav-link">Miox Vue2x Engine</a><a href="miox_react.html" class="mobile-nav-link">Miox React Engine</a><a href="miox_vue2x_classify.html" class="mobile-nav-link">Miox Vue2x Classify</a><a href="miox_vue2x_container.html" class="mobile-nav-link">Miox Vue2x Container</a><strong class="mobile-nav-title">贡献</strong><a href="contribution_code.html" class="mobile-nav-link">贡献代码</a><a href="contribution_code_list.html" class="mobile-nav-link">代码结构总览</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/miox_difference.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/miox-doc/js/lang_select.js"></script>
+<script src="/miox-doc/js/toc.js"></script>
+<script src="/miox-doc/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
